@@ -12,9 +12,10 @@ This script was created to help people with migraines or light sensitivity comfo
 
 ## Features
 
-- Add a full-page dark overlay with one line of code  
-- Customisable `opacity`, `z-index`, toggle key, and modifier keys  
-- Toggle on/off with **Alt + M** (default)  
+- Add a full-page overlay with one line of code  
+- Customisable `colour`, `opacity`, `z-index`, toggle key, and modifier keys  
+- Colour and opacity are handled independently  
+- Toggle on/off with **Alt + M** by default  
 - Auto-disabled when printing  
 - No dependencies, <1KB minified  
 
@@ -25,31 +26,35 @@ This script was created to help people with migraines or light sensitivity comfo
 Include the script via [jsDelivr](https://www.jsdelivr.com/):
 
 ```html
-<script src="https://cdn.jsdelivr.net/gh/frillsdev/migraine-protection@v1.0.0/index.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/frillsdev/migraine-protection@v1.0.1/index.min.js"></script>
 ```
 
 To customise behaviour, use any combination of the following attributes:
 
-| Attribute         | Type    | Default   | Description                                                   |
-|------------------|---------|-----------|---------------------------------------------------------------|
-| `data-opacity`    | number  | `0.5`     | Opacity of the overlay (`0.0`–`1.0`)                          |
-| `data-z`          | number  | `999`     | Z-index of the overlay                                        |
-| `data-toggle`     | string  | `"m"`     | Keyboard key used to toggle the overlay                       |
-| `data-modifier`   | string  | `"alt"`   | Space-separated list of modifiers: `shift`, `ctrl`, `alt`, `meta` |
+| Attribute         | Type    | Default   | Description                                                                 |
+|------------------|---------|-----------|-----------------------------------------------------------------------------|
+| `data-colour`     | string  | `#000`    | CSS background colour (e.g. `#000`, `red`, `hsl(0 0% 90%)`)                 |
+| `data-opacity`    | number  | `0.5`     | Element opacity (`0.0`–`1.0`) — affects transparency of the whole overlay  |
+| `data-z`          | number  | `999`     | Z-index of the overlay                                                      |
+| `data-toggle`     | string  | `"m"`     | Keyboard key used to toggle the overlay                                     |
+| `data-modifier`   | string  | `"alt"`   | Space-separated list of modifiers: `shift`, `ctrl`, `alt`, `meta`           |
+
 
 ---
 
 ## Example
 
-This will toggle the overlay with **Ctrl + Shift + X**:
+This will toggle the overlay with Ctrl + Shift + X, using a soft yellow background at 40% opacity:
 ```html
 <script
-    src="https://cdn.jsdelivr.net/gh/frillsdev/migraine-protection@v1.0.0/index.js"
+    src="https://cdn.jsdelivr.net/gh/frillsdev/migraine-protection@v1.0.1/index.min.js"
+    data-colour="hsl(50 100% 85%)"
     data-opacity="0.4"
     data-z="900"
     data-toggle="x"
     data-modifier="ctrl shift"
 ></script>
+
 ```
 
 ---
