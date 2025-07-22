@@ -2,7 +2,11 @@
 
 <img src="image.png" alt="Computer wearing sunglasses emoji">
 
-A tiny zero-dependency script that adds a dark transparent overlay to any webpage - helpful for reducing harsh brightness or flicker triggers.
+A tiny zero-dependency script script that adds a dim overlay to any page.
+
+For folks who find bright screens overstimulating -- whether from migraines, sensory sensitivity, fatigue, or just a long day.. this might take the edge off.
+
+Learn more about migraines and support options at  at [nhs.uk/conditions/migraine](https://www.nhs.uk/conditions/migraine)
 
 ---
 
