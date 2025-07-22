@@ -17,7 +17,7 @@ This script was created to help people with migraines or light sensitivity comfo
 - Colour and opacity are handled independently  
 - Toggle on/off with **Alt + M** by default  
 - Auto-disabled when printing  
-- No dependencies, <1KB minified  
+- No dependencies, 1.29KB minified  
 
 ---
 
