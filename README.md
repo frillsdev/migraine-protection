@@ -1,6 +1,8 @@
-# 🧠 Migraine Overlay
+# Migraine Protection
 
-A tiny zero-dependency script that adds a dark transparent overlay to any webpage — helpful for reducing harsh brightness or flicker triggers.
+A tiny zero-dependency script that adds a dark transparent overlay to any webpage - helpful for reducing harsh brightness or flicker triggers.
+
+---
 
 ## Why?
 
@@ -10,11 +12,11 @@ This script was created to help people with migraines or light sensitivity comfo
 
 ## Features
 
-- Add a full-page dark overlay with one line of code
-- Customisable `opacity`, `z-index`, and toggle key via attributes
-- Toggle on/off with `Shift + M` (default)
-- Auto-disabled when printing
-- No dependencies, <1KB minified
+- Add a full-page dark overlay with one line of code  
+- Customisable `opacity`, `z-index`, toggle key, and modifier keys  
+- Toggle on/off with **Alt + M** (default)  
+- Auto-disabled when printing  
+- No dependencies, <1KB minified  
 
 ---
 
@@ -28,52 +30,60 @@ Include the script via [jsDelivr](https://www.jsdelivr.com/):
 
 To customise behaviour, use any combination of the following attributes:
 
-| Attribute      | Type    | Default | Description                               |
-| -------------- | ------- | ------- | ----------------------------------------- |
-| `data-opacity` | number  | `0.5`   | Opacity of the overlay (`0.0`–`1.0`)      |
-| `data-z`       | number  | `999`   | Z-index of the overlay                    |
-| `data-toggle`  | string  | `"m"`   | Keyboard key used to toggle the overlay   |
-| `data-shift`   | boolean | `true`  | Whether holding the Shift key is required |
+| Attribute         | Type    | Default   | Description                                                   |
+|------------------|---------|-----------|---------------------------------------------------------------|
+| `data-opacity`    | number  | `0.5`     | Opacity of the overlay (`0.0`–`1.0`)                          |
+| `data-z`          | number  | `999`     | Z-index of the overlay                                        |
+| `data-toggle`     | string  | `"m"`     | Keyboard key used to toggle the overlay                       |
+| `data-modifier`   | string  | `"alt"`   | Space-separated list of modifiers: `shift`, `ctrl`, `alt`, `meta` |
+
+---
 
 ## Example
+
+This will toggle the overlay with **Ctrl + Shift + X**:
 ```html
 <script
-  src="https://cdn.jsdelivr.net/gh/frillsdev/migraine-protection/index.js"
-  data-opacity="0.4"
-  data-z="900"
-  data-toggle="x"
-  data-shift="false"
+    src="https://cdn.jsdelivr.net/gh/frillsdev/migraine-protection/index.js"
+    data-opacity="0.4"
+    data-z="900"
+    data-toggle="x"
+    data-modifier="ctrl shift"
 ></script>
 ```
+
+---
 
 ## Keyboard Controls
 
 | Action         | Shortcut (default) |
-| -------------- | ------------------ |
-| Toggle overlay | `Shift + M`        |
+|----------------|--------------------|
+| Toggle overlay | `Alt + M`          |
 
-
-If `data-toggle="x"` and `data-shift="false"` is used, pressing just x will toggle the overlay.
-
-## Print Behaviour
-The overlay is automatically hidden when printing using a @media print CSS rule.
-
-## Accessibility
-
-- The overlay uses `pointer-events: none`, so it does not interfere with mouse or keyboard navigation.
-- No ARIA roles or interactive content are introduced.
-- Visibility can be toggled manually for user comfort.
-- The script is intentionally non-intrusive and does not trap focus or alter semantics.
-
-## License
-MIT — free to use, modify, and share. Be kind.
-
-# Related Projects (non-affiliated)
-
-- [Dark Reader](https://darkreader.org) — Full dark mode browser extension
-- [Stylus](https://add0n.com/stylus.html) — Custom CSS manager
-
+Change this using `data-toggle` and `data-modifier`.
 
 ---
 
-😎 made by [@frillsdev](https://github.com/yourusername) with care and sunglasses
+## Print Behaviour
+
+The overlay is automatically hidden when printing using a `@media print` CSS rule.
+
+---
+
+## Accessibility
+
+- The overlay uses `pointer-events: none`, so it does not interfere with mouse or keyboard navigation  
+- No ARIA roles or interactive content are introduced  
+- Visibility can be toggled manually for user comfort  
+- The script is intentionally non-intrusive and does not trap focus or alter semantics  
+
+---
+
+## Related Projects (non-affiliated)
+
+- [Dark Reader](https://darkreader.org) - Full dark mode browser extension  
+- [Stylus](https://add0n.com/stylus.html) - Custom CSS manager  
+
+---
+
+Vibe-coded by [@frillsdev](https://github.com/frillsdev) with ChatGPT and sunglasses 😎

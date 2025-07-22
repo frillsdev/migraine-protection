@@ -1,25 +1,24 @@
 (function () {
     const script = document.currentScript;
 
-    // fallback defaults
     const defaultOpacity = 0.5;
     const defaultZ = 999;
     const defaultKey = 'm';
-    const defaultUseShift = true;
+    const defaultModifiers = ['alt'];
 
-    // parse opacity
-    let opacity = parseFloat(script.dataset.opacity);
-    if (isNaN(opacity) || opacity < 0 || opacity > 1) opacity = defaultOpacity;
-
-    // parse z-index
-    let z = parseInt(script.dataset.z);
-    if (isNaN(z) || z < 0) z = defaultZ;
-
-    // parse toggle key
+    // parse values
+    const opacity = (v => (isNaN(v) || v < 0 || v > 1) ? defaultOpacity : v)(parseFloat(script.dataset.opacity));
+    const z = (v => (isNaN(v) || v < 0) ? defaultZ : v)(parseInt(script.dataset.z));
     const toggleKey = (script.dataset.toggle || defaultKey).toLowerCase();
-    const useShift = script.dataset.shift !== 'false'; // default true unless explicitly false
 
-    // create overlay
+    // parse modifiers
+    const modifiers = (script.dataset.modifier || defaultModifiers.join(' ')).toLowerCase().split(/\s+/);
+    const requireShift = modifiers.includes('shift');
+    const requireCtrl = modifiers.includes('ctrl') || modifiers.includes('control');
+    const requireAlt = modifiers.includes('alt');
+    const requireMeta = modifiers.includes('meta') || modifiers.includes('cmd') || modifiers.includes('command');
+
+    // overlay element
     const overlay = document.createElement('div');
     overlay.style.position = 'fixed';
     overlay.style.top = '0';
@@ -40,10 +39,16 @@
 
     document.body.appendChild(overlay);
 
-    // toggle functionality
+    // toggle logic
     let enabled = true;
     document.addEventListener('keydown', (e) => {
-        if (e.key.toLowerCase() === toggleKey && (useShift ? e.shiftKey : true)) {
+        if (
+            e.key.toLowerCase() === toggleKey &&
+            (!requireShift || e.shiftKey) &&
+            (!requireCtrl || e.ctrlKey) &&
+            (!requireAlt || e.altKey) &&
+            (!requireMeta || e.metaKey)
+        ) {
             enabled = !enabled;
             overlay.style.opacity = enabled ? opacity : '0';
         }
