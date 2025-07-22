@@ -23,9 +23,7 @@ This script was created to help people with migraines or light sensitivity comfo
 Include the script via [jsDelivr](https://www.jsdelivr.com/):
 
 ```html
-<script
-  src="https://cdn.jsdelivr.net/gh/yourname/migraine-overlay/index.js"
-></script>
+<script src="https://cdn.jsdelivr.net/gh/frillsdev/migraine-protection/index.js"></script>
 ```
 
 To customise behaviour, use any combination of the following attributes:
@@ -40,7 +38,7 @@ To customise behaviour, use any combination of the following attributes:
 ## Example
 ```html
 <script
-  src="https://cdn.jsdelivr.net/gh/yourname/migraine-overlay/index.js"
+  src="https://cdn.jsdelivr.net/gh/frillsdev/migraine-protection/index.js"
   data-opacity="0.4"
   data-z="900"
   data-toggle="x"
