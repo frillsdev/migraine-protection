@@ -32,12 +32,12 @@ Include the script via [jsDelivr](https://www.jsdelivr.com/):
 To customise behaviour, use any combination of the following attributes:
 
 | Attribute         | Type    | Default   | Description                                                                 |
-|------------------|---------|-----------|-----------------------------------------------------------------------------|
-| `data-colour`     | string  | `#000`    | CSS background colour (e.g. `#000`, `red`, `hsl(0 0% 90%)`)                 |
-| `data-opacity`    | number  | `0.5`     | Element opacity (`0.0`–`1.0`) — affects transparency of the whole overlay  |
+|------------------|---------|-----------|------------------------------------------------------------------------------|
+| `data-colour`     | string  | `#000`    | Background colour (e.g. `#000`, `red`, `hsl(0 0% 90%)`)                 |
+| `data-opacity`    | number  | `0.5`     | Element opacity (`0.0`–`1.0`)                                               |
 | `data-z`          | number  | `999`     | Z-index of the overlay                                                      |
 | `data-toggle`     | string  | `"m"`     | Keyboard key used to toggle the overlay                                     |
-| `data-modifier`   | string  | `"alt"`   | Space-separated list of modifiers: `shift`, `ctrl`, `alt`, `meta`           |
+| `data-modifier`   | string  | `"alt"`   | Options: `shift`, `ctrl`, `alt`, `meta`                                     |
 
 
 ---
