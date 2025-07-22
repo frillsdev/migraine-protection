@@ -2,11 +2,11 @@
 
 <img src="image.png" alt="Computer wearing sunglasses emoji">
 
-A tiny zero-dependency script script that adds a dim overlay to any page.
+A tiny zero-dependency script script that adds a customisable overlay to any webpage, for developers.
 
 For folks who find bright screens overstimulating -- whether from migraines, sensory sensitivity, fatigue, or just a long day.. this might take the edge off.
 
-Learn more about migraines and support options at  at [nhs.uk/conditions/migraine](https://www.nhs.uk/conditions/migraine)
+Learn more about migraines and support options (within the UK) at [nhs.uk/conditions/migraine](https://www.nhs.uk/conditions/migraine)
 
 ---
 
@@ -14,7 +14,6 @@ Learn more about migraines and support options at  at [nhs.uk/conditions/migrain
 
 - Add a full-page overlay with one line of code  
 - Customisable `colour`, `opacity`, `z-index`, toggle key, and modifier keys  
-- Colour and opacity are handled independently  
 - Toggle on/off with **Alt + M** by default  
 - Auto-disabled when printing  
 - No dependencies, 1.29KB minified  
