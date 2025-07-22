@@ -2,7 +2,7 @@
 
 <img src="image.png" alt="Computer wearing sunglasses emoji">
 
-A tiny zero-dependency script script that adds a customisable overlay to any webpage, for developers.
+A tiny zero-dependency script that adds a customisable overlay to any webpage, for developers.
 
 For folks who find bright screens overstimulating -- whether from migraines, sensory sensitivity, fatigue, or just a long day.. this might take the edge off.
 
